@@ -1,0 +1,16 @@
+{
+  "service": "order-orchestrator",
+  "environment": "staging",
+  "signals": [
+    {
+      "timestamp": "2026-04-09T11:04:30Z",
+      "level": "ERROR",
+      "message": "Field customerSegment missing in downstream fulfillment request"
+    },
+    {
+      "timestamp": "2026-04-09T11:04:31Z",
+      "level": "INFO",
+      "message": "Request rejected by fulfillment gateway with validation error"
+    }
+  ]
+}

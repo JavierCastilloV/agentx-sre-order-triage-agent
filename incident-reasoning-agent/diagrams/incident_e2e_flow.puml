@@ -1,0 +1,32 @@
+@startuml
+skinparam monochrome true
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam sequenceArrowThickness 1
+skinparam responseMessageBelowArrow true
+
+title Incident Reasoning Agent End to End Flow
+
+actor Reporter
+participant "Web UI" as UI
+participant "Incident Reasoning Agent" as Agent
+participant "Log Reader" as Logs
+participant "Hypothesis Engine" as Reasoner
+participant "Ticket Store" as Ticket
+participant "Notification Service" as Notify
+participant "Engineering Team" as Team
+
+Reporter -> UI: Submit incident report and attachments
+UI -> Agent: Forward incident payload
+Agent -> Logs: Retrieve relevant log signals
+Logs --> Agent: Return observable technical evidence
+Agent -> Reasoner: Generate structured hypotheses
+Reasoner --> Agent: Summary causes confidence next steps
+Agent -> Ticket: Create enriched incident ticket
+Ticket --> Agent: Ticket created
+Agent -> Notify: Notify engineering team
+Notify -> Team: Send structured diagnostic summary
+Team --> Ticket: Mark issue resolved
+Ticket -> Notify: Resolution event
+Notify -> Reporter: Send resolution update
+@enduml

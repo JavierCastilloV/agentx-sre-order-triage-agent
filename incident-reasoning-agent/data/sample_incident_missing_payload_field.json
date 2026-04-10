@@ -1,0 +1,17 @@
+{
+  "incident_id": "INC-1002",
+  "title": "Order creation fails due to invalid downstream request",
+  "description": "Orders are reaching the orchestration layer but fulfillment creation fails for a subset of requests. Engineering suspects a missing field in the payload sent to the downstream platform.",
+  "service": "order-orchestrator",
+  "environment": "staging",
+  "severity": "medium",
+  "reporter": {
+    "name": "QA Team",
+    "email": "qa.team@example.com"
+  },
+  "attachments": [
+    "order_payload.json",
+    "orchestrator_error.log"
+  ],
+  "observed_at": "2026-04-09T11:05:00Z"
+}

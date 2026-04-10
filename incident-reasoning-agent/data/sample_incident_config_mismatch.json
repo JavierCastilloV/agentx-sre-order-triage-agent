@@ -1,0 +1,17 @@
+{
+  "incident_id": "INC-1003",
+  "title": "Catalog sync returns 500 after deployment",
+  "description": "After the latest deployment, catalog synchronization started failing with internal server errors. The issue appears only in production and did not occur in test environments.",
+  "service": "catalog-sync",
+  "environment": "production",
+  "severity": "high",
+  "reporter": {
+    "name": "Release Manager",
+    "email": "release.manager@example.com"
+  },
+  "attachments": [
+    "catalog_sync_error.log",
+    "deployment_notes.txt"
+  ],
+  "observed_at": "2026-04-09T12:10:00Z"
+}

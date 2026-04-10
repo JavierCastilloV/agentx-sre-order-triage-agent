@@ -1,0 +1,18 @@
+{
+  "service": "checkout-service",
+  "environment": "production",
+  "signals": [
+    {
+      "timestamp": "2026-04-09T10:21:54Z",
+      "level": "ERROR",
+      "message": "Timeout waiting for payment-service response",
+      "duration_ms": 12034,
+      "dependency": "payment-service"
+    },
+    {
+      "timestamp": "2026-04-09T10:21:54Z",
+      "level": "WARN",
+      "message": "Retry policy disabled for payment authorization flow"
+    }
+  ]
+}

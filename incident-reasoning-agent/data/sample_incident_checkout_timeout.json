@@ -1,0 +1,17 @@
+{
+  "incident_id": "INC-1001",
+  "title": "Checkout timeout during payment authorization",
+  "description": "Customers can add items to cart but checkout fails after clicking Place Order. The UI shows a timeout message after several seconds.",
+  "service": "checkout-service",
+  "environment": "production",
+  "severity": "high",
+  "reporter": {
+    "name": "Store Operations",
+    "email": "store.ops@example.com"
+  },
+  "attachments": [
+    "checkout_timeout_log.txt",
+    "payment_trace.png"
+  ],
+  "observed_at": "2026-04-09T10:22:00Z"
+}

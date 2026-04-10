@@ -1,0 +1,16 @@
+{
+  "service": "catalog-sync",
+  "environment": "production",
+  "signals": [
+    {
+      "timestamp": "2026-04-09T12:09:42Z",
+      "level": "ERROR",
+      "message": "Connection refused when calling catalog-db read replica"
+    },
+    {
+      "timestamp": "2026-04-09T12:09:43Z",
+      "level": "WARN",
+      "message": "Environment variable CATALOG_DB_HOST differs from expected production value"
+    }
+  ]
+}

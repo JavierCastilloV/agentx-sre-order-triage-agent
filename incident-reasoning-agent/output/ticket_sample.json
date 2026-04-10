@@ -1,0 +1,29 @@
+{
+  "summary": "Order creation fails due to inventory mismatch between catalog and warehouse service.",
+  "observable_signals": [
+    "Stock validation error returned from warehouse-service",
+    "Mismatch detected between catalog availability and inventory database",
+    "Error code INV-409 triggered during order validation"
+  ],
+  "possible_root_causes": [
+    {
+      "cause": "Inventory synchronization job did not update latest stock levels",
+      "confidence": 0.74
+    },
+    {
+      "cause": "Caching layer returning stale inventory values",
+      "confidence": 0.62
+    },
+    {
+      "cause": "Concurrent reservation process locking stock records",
+      "confidence": 0.49
+    }
+  ],
+  "recommended_actions": [
+    "Verify last successful run of inventory synchronization job",
+    "Invalidate or refresh cache related to product availability",
+    "Check database locks or concurrent reservation conflicts",
+    "Confirm consistency between catalog-service and warehouse-service data sources"
+  ],
+  "ticket_summary": "INC-1042 | order-service | production | Order creation fails due to inventory mismatch between catalog and warehouse service. Primary hypothesis: Inventory synchronization job did not update latest stock levels."
+}
